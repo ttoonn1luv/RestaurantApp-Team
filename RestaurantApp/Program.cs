@@ -34,6 +34,10 @@ namespace RestaurantApp
             Console.WriteLine($"ค่าเฉลี่ยคะแนนรีวิวทั้งหมด: {averageRate}");
             Console.WriteLine(new string('-', 40));
 
+            Console.WriteLine("Chanthima Chamnivesapong");
+            Console.WriteLine("Treenet Saraithong");
+            Console.WriteLine("Anukun Buatsanthia");
+
         }
     }
 
