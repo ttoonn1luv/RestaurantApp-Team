@@ -17,29 +17,27 @@ namespace RestaurantApp
                 new Restaurant(4, "Haidilao Hot Pot", " Hot Pot ", 4.8)
             };
 
+            
+            var highRatedRestaurants = restaurants.Where(r => r.Rate >= 4.5).ToList();
 
-            foreach (var item in restaurants)
+            
+            foreach (var item in highRatedRestaurants)
             {
-                
                 Console.WriteLine($"{item.Name} Type {item.Type.Trim()} -- {item.Rate}");
-                
             }
 
-
-            int totalRestaurants = restaurants.Count;
-            double averageRate = restaurants.Average(r => r.Rate);
+            
+            int totalRestaurants = highRatedRestaurants.Count;
+            double averageRate = highRatedRestaurants.Average(r => r.Rate);
 
             Console.WriteLine(new string('-', 40));
             Console.WriteLine($"จำนวนร้านทั้งหมด: {totalRestaurants} restaurant ");
-            Console.WriteLine($"ค่าเฉลี่ยคะแนนรีวิวทั้งหมด: {averageRate}");
+            Console.WriteLine($"ค่าเฉลี่ยคะแนนรีวิวทั้งหมด: {averageRate:F2}"); 
             Console.WriteLine(new string('-', 40));
-
             Console.WriteLine("Chanthima Chamnivesapong");
             Console.WriteLine("Treenet Saraithong");
             Console.WriteLine("Anukun Buatsanthia");
-
             Console.WriteLine("ttoonn");
-
         }
     }
 
