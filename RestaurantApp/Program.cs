@@ -19,11 +19,11 @@ namespace RestaurantApp
             };
 
             Console.WriteLine($"เพิ่มร้านอาหาร : ");
-            Console.Write($"ป้อนชื่อร้านอาหาร :");
+            Console.Write($"ป้อนชื่อร้านอาหาร : ");
             string name = Console.ReadLine();
             Console.WriteLine($"ป้อนประเภท : ");
             string type = Console.ReadLine();
-            Console.Write($"ป้อนคะแนน :");
+            Console.Write($"ป้อนคะแนน : ");
             string rate = Console.ReadLine();
 
             
@@ -58,10 +58,13 @@ namespace RestaurantApp
             Console.WriteLine(new string('-', 40));
 
 
-            
-        
-            
-       
+
+
+            Console.WriteLine("Chanthima Chamnivesapong");
+            Console.WriteLine("Treenet Saraithong");
+            Console.WriteLine("Anukun Buatsanthia");
+            Console.WriteLine("ttoonn");
+
 
             Console.WriteLine("Chanthima Chamnivesapong");
             Console.WriteLine("Treenet Saraithong");
