@@ -34,34 +34,36 @@ namespace RestaurantApp
          
             restaurants.Add(new Restaurant(newId, name, type, ratingStore));
 
-            Console.WriteLine("--- เพิ่มร้านอาหารสำเร็จแล้ว! ---");
-
 
             var highRatedRestaurants = restaurants.Where(r => r.Rate >= 4.5).ToList();
 
-            
-            
+            double highetScore = restaurants.Max(r => r.Rate);
+            double lowestScrore = restaurants.Min(r => r.Rate);
+
+            Console.WriteLine($"คะแนนสูงสุด {highetScore}");
+            Console.WriteLine($"คะแนนต่ำสุด {lowestScrore}");
+
             foreach (var item in highRatedRestaurants)
             {
-                Console.WriteLine($"{item.Name}  {item.Type.Trim()} -- {item.Rate}");
+                Console.WriteLine($"{item.Name}  {item.Type.Trim()}  {item.Rate}");
             }
 
             
             int totalRestaurants = highRatedRestaurants.Count;
             double averageRate = highRatedRestaurants.Average(r => r.Rate);
 
-           
+            
 
             Console.WriteLine(new string('-', 40));
             Console.WriteLine($"จำนวนร้านทั้งหมด: {totalRestaurants} restaurant ");
             Console.WriteLine($"ค่าเฉลี่ยคะแนนรีวิวทั้งหมด: {averageRate:F2}"); 
             Console.WriteLine(new string('-', 40));
+            
 
 
-            
-        
-            
-       
+
+
+
 
             Console.WriteLine("Chanthima Chamnivesapong");
             Console.WriteLine("Treenet Saraithong");
