@@ -18,6 +18,7 @@ namespace RestaurantApp
                 new Restaurant(4, "Haidilao Hot Pot", " Hot Pot ", 4.8)
             };
 
+
             Console.WriteLine($"เพิ่มร้านอาหาร : ");
             Console.Write($"ป้อนชื่อร้านอาหาร : ");
             string name = Console.ReadLine();
@@ -26,31 +27,30 @@ namespace RestaurantApp
             Console.Write($"ป้อนคะแนน : ");
             string rate = Console.ReadLine();
 
-            
+
             double ratingStore = double.Parse(rate);
 
             int newId = restaurants.Count + 1;
 
-         
+
             restaurants.Add(new Restaurant(newId, name, type, ratingStore));
 
             Console.WriteLine("--- เพิ่มร้านอาหารสำเร็จแล้ว! ---");
 
-
             var highRatedRestaurants = restaurants.Where(r => r.Rate >= 4.5).ToList();
 
-            
-            
+
+
             foreach (var item in highRatedRestaurants)
             {
                 Console.WriteLine($"{item.Name}  {item.Type.Trim()} -- {item.Rate}");
             }
 
-            
+
             int totalRestaurants = highRatedRestaurants.Count;
             double averageRate = highRatedRestaurants.Average(r => r.Rate);
 
-           
+
 
             Console.WriteLine(new string('-', 40));
             Console.WriteLine($"จำนวนร้านทั้งหมด: {totalRestaurants} restaurant ");
@@ -58,13 +58,10 @@ namespace RestaurantApp
             Console.WriteLine(new string('-', 40));
 
 
-
-
-            Console.WriteLine("Chanthima Chamnivesapong");
-            Console.WriteLine("Treenet Saraithong");
-            Console.WriteLine("Anukun Buatsanthia");
-            Console.WriteLine("ttoonn");
-
+            
+        
+            
+       
 
             Console.WriteLine("Chanthima Chamnivesapong");
             Console.WriteLine("Treenet Saraithong");
